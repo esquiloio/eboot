@@ -1,0 +1,5 @@
+#!/bin/sh
+DIRS="../*.[chsS] ../board ../ksdk/platform ../ksdk/usb ../ksdk/middleware"
+find $DIRS -type f -iname '*.[chsS]' -o -iname '*.cpp' | ctags -L-
+find $DIRS -type f -iname '*.[chsS]' -o -iname '*.cpp' | cscope -b -i-
+
